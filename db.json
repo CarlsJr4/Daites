@@ -1,0 +1,805 @@
+{
+  "businesses": [
+    {
+      "id": "UBBlDkkwNtQWvbxthsne4Q",
+      "alias": "dolphin-beach-chula-vista",
+      "name": "Dolphin Beach",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/YQr3lsvyaXodI5EzB86fyw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/dolphin-beach-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 1,
+      "categories": [
+        {
+          "alias": "beaches",
+          "title": "Beaches"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.6339705386318,
+        "longitude": -116.950957546514
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1455 Shoreacres Dr",
+        "address2": "",
+        "address3": null,
+        "city": "Chula Vista",
+        "zip_code": "91915",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1455 Shoreacres Dr",
+          "Chula Vista, CA 91915"
+        ]
+      },
+      "phone": "",
+      "display_phone": "",
+      "distance": 3487.773427227604
+    },
+    {
+      "id": "Fedb4SzWYq_TFna3VBsfaA",
+      "alias": "eastlake-lake-chula-vista",
+      "name": "Eastlake Lake",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/bbkBUOuu6a44mWXvCc0MBA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/eastlake-lake-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 26,
+      "categories": [
+        {
+          "alias": "lakes",
+          "title": "Lakes"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.654486,
+        "longitude": -116.978975
+      },
+      "transactions": [],
+      "location": {
+        "address1": "Eastlake Drive And Lakeshore Dr",
+        "address2": "",
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91913",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "Eastlake Drive And Lakeshore Dr",
+          "Chula Vista, CA 91913"
+        ]
+      },
+      "phone": "",
+      "display_phone": "",
+      "distance": 2017.3644961626742
+    },
+    {
+      "id": "rlavD5zBhir9HoqAvXisug",
+      "alias": "otay-lakes-county-park-chula-vista",
+      "name": "Otay Lakes County Park",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/3TUJYc2IVeTmP3Ii46DEgQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/otay-lakes-county-park-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 26,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.607747,
+        "longitude": -116.930119
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2270 Wueste Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91915",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2270 Wueste Rd",
+          "Chula Vista, CA 91915"
+        ]
+      },
+      "phone": "+18585653600",
+      "display_phone": "(858) 565-3600",
+      "distance": 6905.61183659872
+    },
+    {
+      "id": "BA352Qg2sLDXEiRKjXBCgg",
+      "alias": "sweetwater-summit-regional-park-bonita",
+      "name": "Sweetwater Summit Regional Park",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/8fgrbxPukN6Umo7Ja2X7Yg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/sweetwater-summit-regional-park-bonita?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 44,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        },
+        {
+          "alias": "campgrounds",
+          "title": "Campgrounds"
+        }
+      ],
+      "rating": 4,
+      "coordinates": {
+        "latitude": 32.684988771865,
+        "longitude": -117.007962112057
+      },
+      "transactions": [],
+      "location": {
+        "address1": "3218 Summit Meadow Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Bonita",
+        "zip_code": "91902",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "3218 Summit Meadow Rd",
+          "Bonita, CA 91902"
+        ]
+      },
+      "phone": "+18585653600",
+      "display_phone": "(858) 565-3600",
+      "distance": 4982.298703578857
+    },
+    {
+      "id": "787ICLqd4cCLxpTDXvbLxw",
+      "alias": "lower-otay-lakes-boat-launch-and-park-chula-vista",
+      "name": "Lower Otay Lakes Boat Launch & Park",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/nwsutxC4vq-dpFzyl1jbig/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lower-otay-lakes-boat-launch-and-park-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 10,
+      "categories": [
+        {
+          "alias": "boating",
+          "title": "Boating"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 32.617679,
+        "longitude": -116.93445
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2230 Wueste Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91915",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2230 Wueste Rd",
+          "Chula Vista, CA 91915"
+        ]
+      },
+      "phone": "+16194653474",
+      "display_phone": "(619) 465-3474",
+      "distance": 5733.2619110831165
+    },
+    {
+      "id": "XEyTqK4sFdUm1Tsyg7TLAA",
+      "alias": "rohr-park-bonita",
+      "name": "Rohr Park",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/qdRrfy_yPC35U8AuLNtCZg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/rohr-park-bonita?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 156,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.66592727680709,
+        "longitude": -117.03177641779206
+      },
+      "transactions": [],
+      "location": {
+        "address1": "4548 Sweetwater Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Bonita",
+        "zip_code": "91902",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "4548 Sweetwater Rd",
+          "Bonita, CA 91902"
+        ]
+      },
+      "phone": "+16193976197",
+      "display_phone": "(619) 397-6197",
+      "distance": 6647.373168959667
+    },
+    {
+      "id": "oI4GUGlYlZu8XDvwbi84dA",
+      "alias": "chollas-lake-park-san-diego",
+      "name": "Chollas Lake Park",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Z2nhACPT0CUAtDqy3F4hOw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/chollas-lake-park-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 162,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        }
+      ],
+      "rating": 4,
+      "coordinates": {
+        "latitude": 32.7373399584327,
+        "longitude": -117.06056084669
+      },
+      "transactions": [],
+      "location": {
+        "address1": "6350 College Grove Dr",
+        "address2": "",
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92115",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "6350 College Grove Dr",
+          "San Diego, CA 92115"
+        ]
+      },
+      "phone": "+16195277683",
+      "display_phone": "(619) 527-7683",
+      "distance": 12379.354636789032
+    },
+    {
+      "id": "sLHjvSaVsadPkhOE9uW45Q",
+      "alias": "chula-vista-water-sports-chula-vista",
+      "name": "Chula Vista Water Sports",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ilvHm01QntARAI5ueruLug/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/chula-vista-water-sports-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 31,
+      "categories": [
+        {
+          "alias": "paddleboarding",
+          "title": "Paddleboarding"
+        },
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        },
+        {
+          "alias": "jetskis",
+          "title": "Jet Skis"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.6278952838218,
+        "longitude": -117.10669896076
+      },
+      "transactions": [],
+      "location": {
+        "address1": "999 Bayside Pkwy",
+        "address2": null,
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91910",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "999 Bayside Pkwy",
+          "Chula Vista, CA 91910"
+        ]
+      },
+      "phone": "+16197552957",
+      "display_phone": "(619) 755-2957",
+      "distance": 14291.144388601455
+    },
+    {
+      "id": "BU_A9UzL_QzPCUzOEBbP_Q",
+      "alias": "salt-creek-community-park-chula-vista",
+      "name": "Salt Creek Community Park",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/APewkylRdqss8tP9u5mhbw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/salt-creek-community-park-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 22,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        }
+      ],
+      "rating": 4,
+      "coordinates": {
+        "latitude": 32.64360047204293,
+        "longitude": -116.94517014348769
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2710 Otay Lakes Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91915",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2710 Otay Lakes Rd",
+          "Chula Vista, CA 91915"
+        ]
+      },
+      "phone": "+16195855739",
+      "display_phone": "(619) 585-5739",
+      "distance": 2719.9280150065165
+    },
+    {
+      "id": "8OrcYspHRnwPwEgsUJXrCA",
+      "alias": "steele-canyon-park-el-cajon",
+      "name": "Steele Canyon Park",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/6zT-61JQToxe6VrbkUWbwg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/steele-canyon-park-el-cajon?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 6,
+      "categories": [
+        {
+          "alias": "parks",
+          "title": "Parks"
+        }
+      ],
+      "rating": 4,
+      "coordinates": {
+        "latitude": 32.7391357,
+        "longitude": -116.913681
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2925 Steele Canyon Rd",
+        "address2": "",
+        "address3": "",
+        "city": "El Cajon",
+        "zip_code": "92019",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2925 Steele Canyon Rd",
+          "El Cajon, CA 92019"
+        ]
+      },
+      "phone": "",
+      "display_phone": "",
+      "distance": 9329.671239929603
+    },
+    {
+      "id": "yRor0TArEjbUhLRvzZ2E5A",
+      "alias": "la-jolla-sea-cave-kayaks-la-jolla",
+      "name": "La Jolla Sea Cave Kayaks",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/H2fc2miH2ssP42KW5WNgpA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/la-jolla-sea-cave-kayaks-la-jolla?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 364,
+      "categories": [
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.85414,
+        "longitude": -117.25628
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2164 Avenida De La Playa",
+        "address2": "",
+        "address3": "",
+        "city": "La Jolla",
+        "zip_code": "92037",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2164 Avenida De La Playa",
+          "La Jolla, CA 92037"
+        ]
+      },
+      "phone": "+18584540111",
+      "display_phone": "(858) 454-0111",
+      "distance": 34773.337526987314
+    },
+    {
+      "id": "KZBBwvAJvdZhI1wF2QyTcw",
+      "alias": "mindbody-surf-and-yoga-school-san-diego",
+      "name": "Mindbody Surf and Yoga School",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/3vk0jRVqqMBdyiGmbhg6AQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/mindbody-surf-and-yoga-school-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 4,
+      "categories": [
+        {
+          "alias": "surfschools",
+          "title": "Surf Schools"
+        },
+        {
+          "alias": "surfing",
+          "title": "Surfing"
+        },
+        {
+          "alias": "yoga",
+          "title": "Yoga"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.746473915063035,
+        "longitude": -117.2514902311765
+      },
+      "transactions": [],
+      "location": {
+        "address1": "5188 W Point Loma Blvd",
+        "address2": null,
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92107",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "5188 W Point Loma Blvd",
+          "San Diego, CA 92107"
+        ]
+      },
+      "phone": "+16199727902",
+      "display_phone": "(619) 972-7902",
+      "distance": 28695.86976633613
+    },
+    {
+      "id": "jDUlCY9auztKvjQDLyfDHw",
+      "alias": "aqua-adventures-kayaks-and-paddleboards-san-diego",
+      "name": "Aqua Adventures Kayaks & Paddleboards",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/YPReb50DBJpfaAGZkAso9A/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/aqua-adventures-kayaks-and-paddleboards-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 330,
+      "categories": [
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        },
+        {
+          "alias": "paddleboarding",
+          "title": "Paddleboarding"
+        },
+        {
+          "alias": "sportgoods",
+          "title": "Sporting Goods"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.7589535,
+        "longitude": -117.2386527
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1548 Quivira Way",
+        "address2": "",
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92109",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1548 Quivira Way",
+          "San Diego, CA 92109"
+        ]
+      },
+      "phone": "+16195239577",
+      "display_phone": "(619) 523-9577",
+      "distance": 28071.143920253493
+    },
+    {
+      "id": "hUpjWJDThOKqotQhXeXsYQ",
+      "alias": "hydrobikes-sd-san-diego",
+      "name": "Hydrobikes SD",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/C-Nogl9Bvm-Z-sevSQzP7w/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/hydrobikes-sd-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 15,
+      "categories": [
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        },
+        {
+          "alias": "bikerentals",
+          "title": "Bike Rentals"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.759134,
+        "longitude": -117.238807
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1548 Quivira Way",
+        "address2": null,
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92109",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1548 Quivira Way",
+          "San Diego, CA 92109"
+        ]
+      },
+      "phone": "+16193430572",
+      "display_phone": "(619) 343-0572",
+      "distance": 28070.83555512721
+    },
+    {
+      "id": "O2agdglpggftpYTkcyF67g",
+      "alias": "adventure-water-sports-san-diego",
+      "name": "Adventure Water Sports",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/WN7SmpRBixBhizdHdjNt9w/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/adventure-water-sports-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 104,
+      "categories": [
+        {
+          "alias": "boating",
+          "title": "Boating"
+        },
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 32.7664146552084,
+        "longitude": -117.236415077771
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1710 West Mission Bay Dr",
+        "address2": "",
+        "address3": "The Dana Hotel",
+        "city": "San Diego",
+        "zip_code": "92109",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1710 West Mission Bay Dr",
+          "The Dana Hotel",
+          "San Diego, CA 92109"
+        ]
+      },
+      "phone": "+16192268611",
+      "display_phone": "(619) 226-8611",
+      "distance": 28178.669983712956
+    },
+    {
+      "id": "blB14iRTbHh1tASqLidfqw",
+      "alias": "sunchaser-sup-san-diego-2",
+      "name": "Sunchaser Sup",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xPGp_5muetgB1_CF0djLPQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/sunchaser-sup-san-diego-2?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 59,
+      "categories": [
+        {
+          "alias": "paddleboarding",
+          "title": "Paddleboarding"
+        },
+        {
+          "alias": "yoga",
+          "title": "Yoga"
+        },
+        {
+          "alias": "pilates",
+          "title": "Pilates"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.79159,
+        "longitude": -117.24436
+      },
+      "transactions": [],
+      "location": {
+        "address1": "4000 Fanuel St",
+        "address2": null,
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92109",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "4000 Fanuel St",
+          "San Diego, CA 92109"
+        ]
+      },
+      "phone": "+19366890744",
+      "display_phone": "(936) 689-0744",
+      "distance": 30502.707109373594
+    },
+    {
+      "id": "Ku1jVK_TFUbZFWvkm0DI-Q",
+      "alias": "otay-ranch-town-center-dog-park-chula-vista",
+      "name": "Otay Ranch Town Center Dog Park",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Jn1DxV5wADIR8dnSqVtJdA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/otay-ranch-town-center-dog-park-chula-vista?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 62,
+      "categories": [
+        {
+          "alias": "dog_parks",
+          "title": "Dog Parks"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 32.62396,
+        "longitude": -116.967791
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2015 Birch Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Chula Vista",
+        "zip_code": "91913",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2015 Birch Rd",
+          "Chula Vista, CA 91913"
+        ]
+      },
+      "phone": "+16196569100",
+      "display_phone": "(619) 656-9100",
+      "distance": 4524.846315485978
+    },
+    {
+      "id": "jjUCkDCATZ-Up63lSz_2vA",
+      "alias": "duffy-of-san-diego-san-diego-2",
+      "name": "Duffy of San Diego",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/nAltCptCAx1uD-A-pXi0MA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/duffy-of-san-diego-san-diego-2?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 505,
+      "categories": [
+        {
+          "alias": "boating",
+          "title": "Boating"
+        },
+        {
+          "alias": "boatcharters",
+          "title": "Boat Charters"
+        },
+        {
+          "alias": "tours",
+          "title": "Tours"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.7591415,
+        "longitude": -117.2387726
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1548 Quivira Way",
+        "address2": null,
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92109",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1548 Quivira Way",
+          "San Diego, CA 92109"
+        ]
+      },
+      "phone": "+18885826080",
+      "display_phone": "(888) 582-6080",
+      "distance": 28067.60682437706
+    },
+    {
+      "id": "QvTXkvKCD36NWNGkbxBnOA",
+      "alias": "ocean-connectors-eco-tours-national-city-2",
+      "name": "Ocean Connectors Eco Tours",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/7gDS4mWlLD-UnKmaCjYV1g/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ocean-connectors-eco-tours-national-city-2?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 19,
+      "categories": [
+        {
+          "alias": "rafting",
+          "title": "Rafting/Kayaking"
+        },
+        {
+          "alias": "whalewatchingtours",
+          "title": "Whale Watching Tours"
+        },
+        {
+          "alias": "biketours",
+          "title": "Bike tours"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.67367,
+        "longitude": -117.09033
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1500 N Ave",
+        "address2": null,
+        "address3": "",
+        "city": "National City",
+        "zip_code": "91950",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "1500 N Ave",
+          "National City, CA 91950"
+        ]
+      },
+      "phone": "+16193367744",
+      "display_phone": "(619) 336-7744",
+      "distance": 12175.12082845072
+    },
+    {
+      "id": "I7NMVJzsgZh6XQNuuXe7Ew",
+      "alias": "west-coast-paddle-board-rentals-san-diego",
+      "name": "West Coast Paddle Board Rentals",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/muLgXPBsDWsXdsDxWCm59w/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/west-coast-paddle-board-rentals-san-diego?adjust_creative=H8-Sh_Cwzk3nhMNu7zWPdg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=H8-Sh_Cwzk3nhMNu7zWPdg",
+      "review_count": 133,
+      "categories": [
+        {
+          "alias": "paddleboarding",
+          "title": "Paddleboarding"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 32.730851,
+        "longitude": -117.215673
+      },
+      "transactions": [],
+      "location": {
+        "address1": "2592 Laning Rd",
+        "address2": "",
+        "address3": "",
+        "city": "San Diego",
+        "zip_code": "92106",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+          "2592 Laning Rd",
+          "San Diego, CA 92106"
+        ]
+      },
+      "phone": "+16193654225",
+      "display_phone": "(619) 365-4225",
+      "distance": 24975.94918647879
+    }
+  ]
+}
