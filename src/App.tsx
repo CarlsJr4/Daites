@@ -11,7 +11,7 @@ import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 function App() {
   const [zip, setZip] = useState('');
   const [zipError, setZipError] = useState(false);
-  // const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
+  const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
   );
@@ -29,6 +29,7 @@ function App() {
     axios
       .get<LocationInfoType[]>('http://localhost:3000/businesses')
       .then(res => {
+        setDateIdeas(res.data);
         setFilteredDateIdeas(
           pickRandomArrayItems<LocationInfoType>(res.data, 2)
         );
@@ -61,6 +62,8 @@ function App() {
           <Reccomendations
             isLoading={isLoading}
             recommendations={filteredDateIdeas}
+            dateIdeas={dateIdeas}
+            setFilteredDateIdeas={setFilteredDateIdeas}
           />
         </BaseContainer>
       ) : (
