@@ -7,18 +7,19 @@ import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
 import pickRandomArrayItems from './helpers/pickRandomArrayItems';
+import DateCard from './components/DateCard';
 
-// Your goal: Create an MVP
-//  Input a ZIP code
-//  Output data from the Yelp API
-// 1 activity, 1 dinner, 1 dessert
-// Output data from google maps
-// A link that can be sent to your phone
-
-// The workflow:
-// Send API endpoints to your backend
-// Receive the Yelp data on your frontend
-// You can safely store the Yelp API key on render.com on a simple Express app when you need to
+// To-do list
+// Create a simple express app to store your Yelp API key
+// Actually get data from Yelp API (desserts, dinners, activities, scenic viewpoints)
+// Create waypoints on Google Maps API
+// Send Google Maps link to phone
+// Style the app
+// Toggle additional options (Alter # of locations, select types of locations you want, food preferences)
+// Re-roll entire date
+// Re-roll individual activities
+// Add more info about the dates
+// Add "open until" feature
 
 function App() {
   const [zip, setZip] = useState('');
@@ -53,9 +54,7 @@ function App() {
   return (
     <>
       <BaseContainer>
-        <Heading>You: What do you want to do tonight?</Heading>
-        <Heading>Your SO: Hmmmmm, IDK. You choose.</Heading>
-        <Heading>You:</Heading>
+        <Heading>Where to?</Heading>
         <ZipForm
           handleSubmit={handleSubmit}
           handleChange={handleChange}

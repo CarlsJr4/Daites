@@ -8,6 +8,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
+import DateCard from './DateCard';
 
 type recommendationsProps = {
   isLoading: boolean;
@@ -28,12 +29,10 @@ export default function Reccomendations({
           <Skeleton height="200px" width="100%" />
         </HStack>
       )}
-      <Flex gap={12}>
-        {recommendations.map((item, i) => (
+      <Flex gap={5}>
+        {recommendations.map(item => (
           <Box key={item.id}>
-            <Image boxSize="250px" src={item.image_url} />
-            <Text mt={5}>Take a stroll around {item.name}</Text>
-            {i + 1 < recommendations.length ? <Text>then...</Text> : ''}
+            <DateCard item={item} />
           </Box>
         ))}
       </Flex>
