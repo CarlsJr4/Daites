@@ -4,6 +4,7 @@ import {
   Skeleton,
   SimpleGrid,
   Button,
+  Text,
 } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 import DateCard from './DateCard';
@@ -29,11 +30,16 @@ export default function Reccomendations({
   return (
     <>
       <Heading>Your date:</Heading>
+      <Text>
+        This is a medium effort date that will last approximately 3 hours.
+      </Text>
       {recommendations.length > 0 ? (
-        <RollButton
-          setFilteredDateIdeas={setFilteredDateIdeas}
-          dateIdeas={dateIdeas}
-        />
+        <>
+          <RollButton
+            setFilteredDateIdeas={setFilteredDateIdeas}
+            dateIdeas={dateIdeas}
+          />
+        </>
       ) : (
         ''
       )}
