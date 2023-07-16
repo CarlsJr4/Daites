@@ -20,6 +20,8 @@ import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 // Add more info about the dates
 // Add "closes in X hours" feature
 // Data validation
+// Remove "Your data section" while there is no data
+// Add accordion underneath first field (Should this be an accordion or a multi-step form? Multi step form sounds funner TBH)
 
 function App() {
   const [zip, setZip] = useState('');
