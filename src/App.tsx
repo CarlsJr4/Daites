@@ -24,7 +24,7 @@ function App() {
       .get<LocationInfoType[]>('http://localhost:3000/businesses')
       .then(res => {
         setFilteredDateIdeas(
-          pickRandomArrayItems<LocationInfoType>(res.data, 3)
+          pickRandomArrayItems<LocationInfoType>(res.data, 2)
         );
       })
       .catch(err => console.log(err))
