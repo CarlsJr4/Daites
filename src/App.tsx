@@ -6,6 +6,7 @@ import LocationInfoType from './types/locationType';
 import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
+import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 
 // Your goal: Create an MVP
 //  Input a ZIP code
@@ -19,42 +20,30 @@ import Reccomendations from './components/Reccomendations';
 // Receive the Yelp data on your frontend
 // You can safely store the Yelp API key on render.com on a simple Express app when you need to
 
-// It should involve minimal backend
-
-// Once you get this MVP going, refactor the code to be more maintainable
-
 function App() {
   const [zip, setZip] = useState('');
-  const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
-  const [recommendations, setReccomendations] = useState(
+  // const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
+  const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
   );
   const [isLoading, setLoading] = useState(false);
 
-  const pickRandomDates = (
-    dates: LocationInfoType[],
-    numberOfLocations: number
-  ) => {
-    const allDates = [...dates];
-    const shuffledDates = allDates.sort((a, b) => 0.5 - Math.random());
-
-    return shuffledDates.slice(0, numberOfLocations);
-  };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setDateIdeas([]);
-    setReccomendations([]);
+    setFilteredDateIdeas([]);
     axios
       .get<LocationInfoType[]>('http://localhost:3030/businesses')
       .then(res => {
-        setDateIdeas(res.data);
-        setReccomendations(pickRandomDates(res.data, 3)); // Pick 3 random date ideas
+        setFilteredDateIdeas(
+          pickRandomArrayItems<LocationInfoType>(res.data, 3)
+        );
       })
       .catch(err => console.log(err))
-      .finally(() => setLoading(false));
-    setZip('');
+      .finally(() => {
+        setLoading(false);
+        setZip('');
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +66,7 @@ function App() {
       <BaseContainer>
         <Reccomendations
           isLoading={isLoading}
-          recommendations={recommendations}
+          recommendations={filteredDateIdeas}
         />
       </BaseContainer>
     </>
