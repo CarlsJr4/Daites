@@ -10,6 +10,7 @@ import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 
 function App() {
   const [zip, setZip] = useState('');
+  const [zipError, setZipError] = useState(false);
   // const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
@@ -18,8 +19,13 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
+    setZipError(false);
     setFilteredDateIdeas([]);
+    if (zip.length !== 5 || isNaN(Number(zip))) {
+      setZipError(true);
+      return;
+    }
+    setLoading(true);
     axios
       .get<LocationInfoType[]>('http://localhost:3000/businesses')
       .then(res => {
@@ -43,6 +49,7 @@ function App() {
       <BaseContainer>
         <Heading>Where to?</Heading>
         <ZipForm
+          isZipInvalid={zipError}
           handleSubmit={handleSubmit}
           handleChange={handleChange}
           zip={zip}
