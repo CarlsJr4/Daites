@@ -41,7 +41,6 @@ export default function Reccomendations({
         <HStack>
           <Skeleton height="500px" width="100%" />
           <Skeleton height="500px" width="100%" />
-          <Skeleton height="500px" width="100%" />
         </HStack>
       )}
       <SimpleGrid columns={3} spacing={5}>
