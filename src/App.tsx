@@ -8,21 +8,6 @@ import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
 import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 
-// To-do list
-// Create a simple express app to store your Yelp API key
-// Actually get data from Yelp API (desserts, dinners, activities, scenic viewpoints)
-// Create waypoints on Google Maps API
-// Send Google Maps link to phone
-// Style the app
-// Toggle additional options (Alter # of locations, select types of locations you want, food preferences)
-// Re-roll entire date
-// Re-roll individual activities
-// Add more info about the dates
-// Add "closes in X hours" feature
-// Data validation
-// Remove "Your data section" while there is no data
-// Add accordion underneath first field (Should this be an accordion or a multi-step form? Multi step form sounds funner TBH)
-
 function App() {
   const [zip, setZip] = useState('');
   // const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
@@ -36,7 +21,7 @@ function App() {
     setLoading(true);
     setFilteredDateIdeas([]);
     axios
-      .get<LocationInfoType[]>('http://localhost:3030/businesses')
+      .get<LocationInfoType[]>('http://localhost:3000/businesses')
       .then(res => {
         setFilteredDateIdeas(
           pickRandomArrayItems<LocationInfoType>(res.data, 3)
