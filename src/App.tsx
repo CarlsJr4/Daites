@@ -8,6 +8,8 @@ import {
   Box,
   Text,
   Image,
+  Skeleton,
+  HStack,
 } from '@chakra-ui/react';
 
 import axios from 'axios';
@@ -55,28 +57,21 @@ function App() {
     numberOfLocations: number
   ) => {
     const allDates = [...dates];
-    const randomlyPickedDates = [];
+    const shuffledDates = allDates.sort((a, b) => 0.5 - Math.random());
 
-    // Get the dates array [X]
-    // Pick a random number from 1 to array length
-    // Splice that array item and push it to the new array
-    // Return the array;
-
-    return;
-    // Input array
-    // Input number
-    // Pick X random array items, return the array
+    return shuffledDates.slice(0, numberOfLocations);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setDateIdeas([]);
+    setReccomendations([]);
     axios
       .get<LocationInfoType[]>('http://localhost:3030/businesses')
       .then(res => {
         setDateIdeas(res.data);
-        setReccomendations(res.data); // Pick 3 random date ideas
+        setReccomendations(pickRandomDates(res.data, 3)); // Pick 3 random date ideas
       })
       .catch(err => console.log(err))
       .finally(() => setLoading(false));
@@ -129,13 +124,22 @@ function App() {
         gap={5}
       >
         <Heading>Your date:</Heading>
-        {dateIdeas.map((item, i) => (
-          <Box key={item.id}>
-            <Image boxSize="250px" src={item.image_url} />
-            <Text>Take a stroll around {item.name}</Text>
-            {i + 1 < dateIdeas.length ? <Text>then...</Text> : ''}
-          </Box>
-        ))}
+        {isLoading && (
+          <HStack>
+            <Skeleton height="200px" width="100%" />
+            <Skeleton height="200px" width="100%" />
+            <Skeleton height="200px" width="100%" />
+          </HStack>
+        )}
+        <Flex gap={12}>
+          {recommendations.map((item, i) => (
+            <Box key={item.id}>
+              <Image boxSize="250px" src={item.image_url} />
+              <Text mt={5}>Take a stroll around {item.name}</Text>
+              {i + 1 < recommendations.length ? <Text>then...</Text> : ''}
+            </Box>
+          ))}
+        </Flex>
       </Flex>
     </>
   );
