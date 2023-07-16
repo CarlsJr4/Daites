@@ -9,6 +9,7 @@ import LocationInfoType from '../types/locationType';
 import DateCard from './DateCard';
 import { BsFillDice6Fill } from 'react-icons/bs';
 import pickRandomArrayItems from '../helpers/pickRandomArrayItems';
+import RollButton from './RollButton';
 
 type recommendationsProps = {
   isLoading: boolean;
@@ -29,17 +30,10 @@ export default function Reccomendations({
     <>
       <Heading>Your date:</Heading>
       {recommendations.length > 0 ? (
-        <Button
-          onClick={() =>
-            setFilteredDateIdeas(
-              pickRandomArrayItems<LocationInfoType>(dateIdeas, 2)
-            )
-          }
-          alignSelf="baseline"
-          leftIcon={<BsFillDice6Fill />}
-        >
-          Re-roll
-        </Button> // Click this button to re-render the date ideas. Since we aren't querying a real API, just use your helper function to re-render the state.
+        <RollButton
+          setFilteredDateIdeas={setFilteredDateIdeas}
+          dateIdeas={dateIdeas}
+        />
       ) : (
         ''
       )}
