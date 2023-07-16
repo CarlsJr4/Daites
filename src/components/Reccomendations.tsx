@@ -1,12 +1,4 @@
-import {
-  Heading,
-  HStack,
-  Skeleton,
-  Flex,
-  Box,
-  Image,
-  Text,
-} from '@chakra-ui/react';
+import { Heading, HStack, Skeleton, SimpleGrid } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 import DateCard from './DateCard';
 
@@ -24,18 +16,16 @@ export default function Reccomendations({
       <Heading>Your date:</Heading>
       {isLoading && (
         <HStack>
-          <Skeleton height="200px" width="100%" />
-          <Skeleton height="200px" width="100%" />
-          <Skeleton height="200px" width="100%" />
+          <Skeleton height="500px" width="100%" />
+          <Skeleton height="500px" width="100%" />
+          <Skeleton height="500px" width="100%" />
         </HStack>
       )}
-      <Flex gap={5}>
-        {recommendations.map(item => (
-          <Box key={item.id}>
-            <DateCard item={item} />
-          </Box>
+      <SimpleGrid columns={3} spacing={5}>
+        {recommendations.map((item, i) => (
+          <DateCard key={item.id} index={i} item={item} />
         ))}
-      </Flex>
+      </SimpleGrid>
     </>
   );
 }

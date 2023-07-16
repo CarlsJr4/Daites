@@ -1,6 +1,7 @@
 type LocationInfoType = {
   id: string;
   name: string;
+  display_phone: string;
   location: {
     display_address: string[];
   };

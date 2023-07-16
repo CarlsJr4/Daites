@@ -7,7 +7,6 @@ import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
 import pickRandomArrayItems from './helpers/pickRandomArrayItems';
-import DateCard from './components/DateCard';
 
 // To-do list
 // Create a simple express app to store your Yelp API key
@@ -19,7 +18,8 @@ import DateCard from './components/DateCard';
 // Re-roll entire date
 // Re-roll individual activities
 // Add more info about the dates
-// Add "open until" feature
+// Add "closes in X hours" feature
+// Data validation
 
 function App() {
   const [zip, setZip] = useState('');
