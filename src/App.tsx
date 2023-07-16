@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Text } from '@chakra-ui/react';
 
 import axios from 'axios';
 import { useState } from 'react';
@@ -56,12 +56,22 @@ function App() {
           isLoading={isLoading}
         />
       </BaseContainer>
-      <BaseContainer>
-        <Reccomendations
-          isLoading={isLoading}
-          recommendations={filteredDateIdeas}
-        />
-      </BaseContainer>
+      {filteredDateIdeas.length ? (
+        <BaseContainer>
+          <Reccomendations
+            isLoading={isLoading}
+            recommendations={filteredDateIdeas}
+          />
+        </BaseContainer>
+      ) : (
+        <BaseContainer>
+          <Heading>Almost there!</Heading>
+          <Text>
+            A recommended itinerary will be generated for you after gathering
+            some information.
+          </Text>
+        </BaseContainer>
+      )}
     </>
   );
 }
