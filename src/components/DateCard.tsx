@@ -8,6 +8,7 @@ import {
   Heading,
   Badge,
   Box,
+  HStack,
 } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 
@@ -22,14 +23,21 @@ export default function DateCard({
     <Card h="100%">
       <CardBody>
         <Stack divider={<StackDivider />} spacing="4">
-          <Heading size="md">
-            {index + 1}. {item.name}{' '}
-            <Box>
-              <Badge colorScheme="green">Sightseeing</Badge>
-            </Box>
-          </Heading>
+          <HStack spacing="20px">
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              objectFit="cover"
+              src={item.image_url}
+            />
+            <Heading size="md">
+              {index + 1}. {item.name}{' '}
+              <Box>
+                <Badge colorScheme="green">Sightseeing</Badge>
+              </Box>
+            </Heading>
+          </HStack>
           <Text>Take a stroll around {item.name}.</Text>
-          <Image boxSize="350px" objectFit="cover" src={item.image_url} />
           <Heading size="xs" textTransform="uppercase">
             Extra Info
           </Heading>
