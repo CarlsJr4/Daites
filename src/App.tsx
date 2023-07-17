@@ -7,6 +7,7 @@ import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
 import pickRandomArrayItems from './helpers/pickRandomArrayItems';
+import CustomMap from './components/CustomMap';
 
 function App() {
   const [zip, setZip] = useState('');
@@ -75,6 +76,9 @@ function App() {
           </Text>
         </BaseContainer>
       )}
+      <BaseContainer>
+        <CustomMap />
+      </BaseContainer>
     </>
   );
 }
