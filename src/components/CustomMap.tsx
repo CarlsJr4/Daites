@@ -110,7 +110,7 @@ export default function CustomMap({
             }}
           />
         </Source>
-        {locations.map(location => {
+        {locations.map((location, i) => {
           const { longitude, latitude } = location.coordinates;
           return (
             <>
@@ -123,7 +123,7 @@ export default function CustomMap({
                 closeButton={false}
                 closeOnClick={false}
               >
-                PLACEHOLDER
+                {i + 1}. {location.name}
               </Popup>
               <Marker
                 longitude={longitude}
