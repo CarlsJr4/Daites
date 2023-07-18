@@ -31,20 +31,20 @@ function App() {
   useEffect(() => {
     if (filteredDateIdeas.length > 0) {
       const mapboxToken = import.meta.env.VITE_MAPBOX as string;
-      const mapboxLocationCoords: Array<number[]> = [];
-      let mapboxPathCoords = '';
+      const mapboxMarkerCoords: Array<number[]> = [];
+      let mapboxLinePathData = '';
       filteredDateIdeas.forEach((date, i) => {
         const latitude = date.coordinates.latitude;
         const longitude = date.coordinates.longitude;
 
-        mapboxLocationCoords.push([longitude, latitude]);
-        mapboxPathCoords += `${longitude},${latitude}`;
-        if (i + 1 < filteredDateIdeas.length) mapboxPathCoords += ';';
+        mapboxMarkerCoords.push([longitude, latitude]);
+        mapboxLinePathData += `${longitude},${latitude}`;
+        if (i + 1 < filteredDateIdeas.length) mapboxLinePathData += ';';
       });
 
-      setLocationCoords(mapboxLocationCoords);
+      setLocationCoords(mapboxMarkerCoords);
 
-      const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxPathCoords}?geometries=geojson&access_token=${mapboxToken}`;
+      const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxLinePathData}?geometries=geojson&access_token=${mapboxToken}`;
       axios
         .get<GeoJsonType>(mapboxEndpoint)
         .then(res => {
