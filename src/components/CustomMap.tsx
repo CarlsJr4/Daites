@@ -46,8 +46,8 @@ export default function CustomMap({
 
       setMarkerCoords(mapboxMarkerCoords);
       setViewState({
-        longitude: markerCoords[0][0],
-        latitude: markerCoords[0][1],
+        longitude: locations[0].coordinates.longitude,
+        latitude: locations[0].coordinates.latitude,
         zoom: 10,
       });
 
