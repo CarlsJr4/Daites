@@ -100,7 +100,7 @@ export default function CustomMap({
         initialViewState={{
           longitude: -117.918976,
           latitude: 33.812511,
-          zoom: 10,
+          zoom: 13,
         }}
         longitude={viewState.longitude}
         latitude={viewState.latitude}
