@@ -19,9 +19,6 @@ export default function CustomMap({
 }: {
   locations: LocationInfoType[];
 }) {
-  const [markerCoords, setMarkerCoords] = useState<Array<number[]>>([
-    [-117.918976, 33.812511],
-  ]);
   const [pathLine, setPathLine] = useState<MapType>({} as MapType);
   const [viewState, setViewState] = useState({
     longitude: -117.918976,
@@ -44,7 +41,6 @@ export default function CustomMap({
         if (i + 1 < locations.length) mapboxLinePathData += ';';
       });
 
-      setMarkerCoords(mapboxMarkerCoords);
       setViewState({
         longitude: locations[0].coordinates.longitude,
         latitude: locations[0].coordinates.latitude,
