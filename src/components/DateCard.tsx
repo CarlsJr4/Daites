@@ -20,7 +20,7 @@ export default function DateCard({
   index: number;
 }) {
   return (
-    <Card h="100%">
+    <Card h="100%" key={item.id}>
       <CardBody>
         <Stack divider={<StackDivider />} spacing="4">
           <HStack spacing="20px">
