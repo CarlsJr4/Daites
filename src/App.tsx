@@ -1,4 +1,4 @@
-import { Heading, Text } from '@chakra-ui/react';
+import { HStack, Heading, Skeleton, Text } from '@chakra-ui/react';
 
 import axios from 'axios';
 import { useState } from 'react';
@@ -76,6 +76,13 @@ function App() {
             A recommended itinerary will be generated for you after gathering
             some information.
           </Text>
+          {isLoading && (
+            <HStack>
+              <Skeleton height="350px" width="100%" />
+              <Skeleton height="350px" width="100%" />
+              <Skeleton height="350px" width="100%" />
+            </HStack>
+          )}
         </BaseContainer>
       )}
       <BaseContainer>

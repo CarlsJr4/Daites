@@ -1,4 +1,4 @@
-import { Heading, HStack, Skeleton, SimpleGrid, Text } from '@chakra-ui/react';
+import { Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 import DateCard from './DateCard';
 import RollButton from './RollButton';
@@ -13,7 +13,6 @@ type recommendationsProps = {
 };
 
 export default function Reccomendations({
-  isLoading,
   dateIdeas,
   recommendations,
   setFilteredDateIdeas,
@@ -33,12 +32,6 @@ export default function Reccomendations({
         </>
       ) : (
         ''
-      )}
-      {isLoading && (
-        <HStack>
-          <Skeleton height="500px" width="100%" />
-          <Skeleton height="500px" width="100%" />
-        </HStack>
       )}
       <SimpleGrid columns={3} spacing={5}>
         {recommendations.map((item, i) => (

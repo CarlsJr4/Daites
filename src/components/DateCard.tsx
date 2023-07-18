@@ -9,6 +9,7 @@ import {
   Badge,
   Box,
   HStack,
+  SkeletonCircle,
 } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 
@@ -29,6 +30,7 @@ export default function DateCard({
               boxSize="150px"
               objectFit="cover"
               src={item.image_url}
+              fallback={<SkeletonCircle h="150px" w="150px" />}
             />
             <Heading size="md">
               {index + 1}. {item.name}{' '}
