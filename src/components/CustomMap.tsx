@@ -78,7 +78,7 @@ export default function CustomMap({
 
   return (
     <>
-      <Heading>Routing Info:</Heading>
+      {locations.length > 0 && <Heading>Location breakdown</Heading>}
       {Object.keys(pathLine).length > 0 ? (
         <Box>
           <Text>

@@ -20,9 +20,10 @@ export default function Reccomendations({
   return (
     <>
       <Heading>Your date:</Heading>
-      <Text>
-        This is a medium effort date that will last approximately 3 hours.
-      </Text>
+      {/* <Text>
+        This is a medium effort date that will last around{' '}
+        {recommendations.length} hours (excluding driving).
+      </Text> */}
       {recommendations.length > 0 ? (
         <>
           <RollButton
