@@ -20,7 +20,19 @@ function App() {
     [] as LocationInfoType[]
   );
   const [isLoading, setLoading] = useState(false);
-  const [pathData, setPathData] = useState<MapType>({} as MapType);
+  const [pathData, setPathData] = useState<MapType>({
+    startingLat: 32.6339705386318,
+    startingLong: -116.950957546514,
+    endingLat: 32.654486,
+    endingLong: -116.978975,
+    pathArray: [
+      [-84.512007, 39.103933],
+      [-84.511692, 39.102682],
+      [-84.511987, 39.102638],
+    ],
+    duration: 3000,
+    distance: 3000,
+  });
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
@@ -74,14 +86,6 @@ function App() {
         setZip('');
       });
   };
-
-  // const retrievedPathData: MapType = {
-  // pathArray: [[3, 3]], // We need to get these 3 values from Mapbox API
-  // direction: 3,
-  // distance: 3,
-  // };
-
-  // setPathData(retrievedPathData);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setZip(e.target.value);
