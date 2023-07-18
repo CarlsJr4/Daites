@@ -24,15 +24,6 @@ export default function CustomMap({
   ]);
   const [pathLine, setPathLine] = useState<MapType>({} as MapType);
 
-  const pathDataCustom = {
-    type: 'Feature',
-    properties: {},
-    geometry: {
-      type: 'LineString',
-      coordinates: pathLine.pathArray,
-    },
-  };
-
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
     if (locations.length > 0) {
@@ -64,6 +55,15 @@ export default function CustomMap({
         .catch(err => console.log(err));
     }
   }, [locations]);
+
+  const pathDataCustom = {
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'LineString',
+      coordinates: pathLine.pathArray,
+    },
+  };
 
   return (
     <>
