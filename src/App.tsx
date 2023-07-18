@@ -61,10 +61,12 @@ function App() {
       const cachedRecommendations = JSON.parse(
         localStorage.getItem('cachedRecommendations') as string
       ) as BusinessType[];
+      setDateIdeas(cachedRecommendations);
       setFilteredDateIdeas(
         pickRandomArrayItems<BusinessType>(cachedRecommendations, 3)
       );
       setLoading(false);
+      setZip('');
     }
   };
 
