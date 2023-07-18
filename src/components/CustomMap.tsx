@@ -40,7 +40,7 @@ export default function CustomMap({ pathData }: CustomMapProps) {
         initialViewState={{
           longitude: pathData.startingLong,
           latitude: pathData.startingLat,
-          zoom: 14,
+          zoom: 10,
         }}
         style={{ width: 600, height: 400 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
