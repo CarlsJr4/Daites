@@ -22,9 +22,7 @@ function App() {
     [] as LocationInfoType[]
   );
 
-  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([
-    [0, 0],
-  ]);
+  const [markerCoords, setMarkerCoords] = useState<Array<number[]>>([[0, 0]]);
   const [pathLine, setPathLine] = useState<MapType>({} as MapType);
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
@@ -42,7 +40,7 @@ function App() {
         if (i + 1 < filteredDateIdeas.length) mapboxLinePathData += ';';
       });
 
-      setLocationCoords(mapboxMarkerCoords);
+      setMarkerCoords(mapboxMarkerCoords);
 
       const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxLinePathData}?geometries=geojson&access_token=${mapboxToken}`;
       axios
@@ -118,7 +116,7 @@ function App() {
         </BaseContainer>
       )}
       <BaseContainer>
-        <CustomMap pathLine={pathLine} locationData={locationCoords} />
+        <CustomMap pathLine={pathLine} markerCoords={markerCoords} />
       </BaseContainer>
     </>
   );

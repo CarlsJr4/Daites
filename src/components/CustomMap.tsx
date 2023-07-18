@@ -11,11 +11,14 @@ import MapType from '../types/mapType';
 import { Offset } from 'mapbox-gl';
 
 type CustomMapProps = {
-  locationData: number[][];
+  markerCoords: number[][];
   pathLine: MapType;
 };
 
-export default function CustomMap({ locationData, pathLine }: CustomMapProps) {
+export default function CustomMap({
+  markerCoords: locationData,
+  pathLine,
+}: CustomMapProps) {
   const pathDataCustom = {
     type: 'Feature',
     properties: {},
