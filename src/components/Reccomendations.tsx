@@ -1,15 +1,6 @@
-import {
-  Heading,
-  HStack,
-  Skeleton,
-  SimpleGrid,
-  Button,
-  Text,
-} from '@chakra-ui/react';
+import { Heading, HStack, Skeleton, SimpleGrid, Text } from '@chakra-ui/react';
 import LocationInfoType from '../types/locationType';
 import DateCard from './DateCard';
-import { BsFillDice6Fill } from 'react-icons/bs';
-import pickRandomArrayItems from '../helpers/pickRandomArrayItems';
 import RollButton from './RollButton';
 
 type recommendationsProps = {
