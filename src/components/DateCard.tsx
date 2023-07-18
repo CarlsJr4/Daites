@@ -42,8 +42,8 @@ export default function DateCard({
             Extra Info
           </Heading>
           <Box>
-            {item.location.display_address.map(item => (
-              <Text>{item}</Text>
+            {item.location.display_address.map((item, i) => (
+              <Text key={i}>{item}</Text>
             ))}
             <Text>{item.display_phone}</Text>
           </Box>
