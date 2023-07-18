@@ -23,6 +23,11 @@ export default function CustomMap({
     [-117.918976, 33.812511],
   ]);
   const [pathLine, setPathLine] = useState<MapType>({} as MapType);
+  const [viewState, setViewState] = useState({
+    longitude: -117.918976,
+    latitude: 33.812511,
+    zoom: 10,
+  });
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
@@ -40,6 +45,11 @@ export default function CustomMap({
       });
 
       setMarkerCoords(mapboxMarkerCoords);
+      setViewState({
+        longitude: markerCoords[0][0],
+        latitude: markerCoords[0][1],
+        zoom: 10,
+      });
 
       const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxLinePathData}?geometries=geojson&access_token=${mapboxToken}`;
       axios
@@ -83,14 +93,17 @@ export default function CustomMap({
 
       <Map
         reuseMaps
+        onMove={e => setViewState(e.viewState)}
         mapboxAccessToken={import.meta.env.VITE_MAPBOX as string}
         initialViewState={{
           longitude: -117.918976,
           latitude: 33.812511,
           zoom: 10,
         }}
-        longitude={markerCoords[0][0]} // [0][0] is the longitude of the first location
-        latitude={markerCoords[0][1]} // [0][1] is the latitude of the first location
+        longitude={viewState.longitude}
+        latitude={viewState.latitude}
+        // longitude={markerCoords[0][0]} // [0][0] is the longitude of the first location
+        // latitude={markerCoords[0][1]} // [0][1] is the latitude of the first location
         style={{ width: 600, height: 400 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >
