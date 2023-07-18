@@ -11,13 +11,13 @@ import {
   HStack,
   SkeletonCircle,
 } from '@chakra-ui/react';
-import LocationInfoType from '../types/locationType';
+import LocationInfoType, { BusinessType } from '../types/locationType';
 
 export default function DateCard({
   item,
   index,
 }: {
-  item: LocationInfoType;
+  item: BusinessType;
   index: number;
 }) {
   return (

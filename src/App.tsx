@@ -2,7 +2,7 @@ import { HStack, Heading, Skeleton, Text } from '@chakra-ui/react';
 
 import axios from 'axios';
 import { useState } from 'react';
-import LocationInfoType from './types/locationType';
+import LocationInfoType, { BusinessType } from './types/locationType';
 import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';
@@ -15,9 +15,9 @@ function App() {
   const [zipError, setZipError] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
-  const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
+  const [dateIdeas, setDateIdeas] = useState([] as BusinessType[]);
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
-    [] as LocationInfoType[]
+    [] as BusinessType[]
   );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -29,12 +29,21 @@ function App() {
       return;
     }
     setLoading(true);
+
     axios
-      .get<LocationInfoType[]>('http://localhost:3000/businesses')
+      .get<LocationInfoType>(
+        `https://outing-planner-api.onrender.com/recommendations/${zip}`
+      )
       .then(res => {
-        setDateIdeas(res.data);
+        setDateIdeas(res.data.businesses);
+        // res.data comes in this form:
+        // {
+        // 	businesses: array with location type shape,
+        // 	region: {...}
+        // 	total: ...
+        // }
         setFilteredDateIdeas(
-          pickRandomArrayItems<LocationInfoType>(res.data, 3)
+          pickRandomArrayItems<BusinessType>(res.data.businesses, 3)
         );
       })
       .catch(err => console.log(err))

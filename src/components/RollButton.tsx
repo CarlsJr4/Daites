@@ -1,13 +1,11 @@
 import { Button } from '@chakra-ui/react';
 import { BsFillDice6Fill } from 'react-icons/bs';
 import pickRandomArrayItems from '../helpers/pickRandomArrayItems';
-import LocationInfoType from '../types/locationType';
+import LocationInfoType, { BusinessType } from '../types/locationType';
 
 type rollButtonProps = {
-  setFilteredDateIdeas: (
-    value: React.SetStateAction<LocationInfoType[]>
-  ) => void;
-  dateIdeas: LocationInfoType[];
+  setFilteredDateIdeas: (value: React.SetStateAction<BusinessType[]>) => void;
+  dateIdeas: BusinessType[];
 };
 
 export default function RollButton({
@@ -17,9 +15,7 @@ export default function RollButton({
   return (
     <Button
       onClick={() =>
-        setFilteredDateIdeas(
-          pickRandomArrayItems<LocationInfoType>(dateIdeas, 3)
-        )
+        setFilteredDateIdeas(pickRandomArrayItems<BusinessType>(dateIdeas, 3))
       }
       alignSelf="baseline"
       leftIcon={<BsFillDice6Fill />}

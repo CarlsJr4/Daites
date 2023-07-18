@@ -1,15 +1,13 @@
 import { Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import LocationInfoType from '../types/locationType';
+import LocationInfoType, { BusinessType } from '../types/locationType';
 import DateCard from './DateCard';
 import RollButton from './RollButton';
 
 type recommendationsProps = {
   isLoading: boolean;
-  recommendations: LocationInfoType[];
-  dateIdeas: LocationInfoType[];
-  setFilteredDateIdeas: (
-    value: React.SetStateAction<LocationInfoType[]>
-  ) => void;
+  recommendations: BusinessType[];
+  dateIdeas: BusinessType[];
+  setFilteredDateIdeas: (value: React.SetStateAction<BusinessType[]>) => void;
 };
 
 export default function Reccomendations({
