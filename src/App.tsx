@@ -2,7 +2,8 @@ import { HStack, Heading, Skeleton, Text } from '@chakra-ui/react';
 
 import axios from 'axios';
 import { useState } from 'react';
-import LocationInfoType, { BusinessType } from './types/locationType';
+import LocationInfoType from './types/locationType';
+import BusinessType from './types/BusinessType';
 import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
 import Reccomendations from './components/Reccomendations';

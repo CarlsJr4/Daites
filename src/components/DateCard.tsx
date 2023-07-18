@@ -12,7 +12,7 @@ import {
   SkeletonCircle,
   VStack,
 } from '@chakra-ui/react';
-import LocationInfoType, { BusinessType } from '../types/locationType';
+import BusinessType from '../types/BusinessType';
 
 export default function DateCard({
   item,

@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react';
 import { BsFillDice6Fill } from 'react-icons/bs';
 import pickRandomArrayItems from '../helpers/pickRandomArrayItems';
-import LocationInfoType, { BusinessType } from '../types/locationType';
+import BusinessType from '../types/BusinessType';
 
 type rollButtonProps = {
   setFilteredDateIdeas: (value: React.SetStateAction<BusinessType[]>) => void;

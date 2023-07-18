@@ -1,5 +1,5 @@
-import { Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import LocationInfoType, { BusinessType } from '../types/locationType';
+import { Heading, SimpleGrid } from '@chakra-ui/react';
+import BusinessType from '../types/BusinessType';
 import DateCard from './DateCard';
 import RollButton from './RollButton';
 

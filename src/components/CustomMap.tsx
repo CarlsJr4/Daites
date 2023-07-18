@@ -13,7 +13,7 @@ import { Offset } from 'mapbox-gl';
 import axios from 'axios';
 import { useState, useEffect, useRef } from 'react';
 import GeoJsonType from '../types/geoJsonType';
-import LocationInfoType, { BusinessType } from '../types/locationType';
+import BusinessType from '../types/BusinessType';
 
 export default function CustomMap({
   locations,
