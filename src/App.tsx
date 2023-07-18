@@ -36,15 +36,31 @@ function App() {
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
+    // How can we make this code more reusable?
+    // How can we reduce the number of type files? Do we even need the mapType type?
+
     if (filteredDateIdeas.length > 0) {
-      const transportMethod = 'driving';
       const mapboxToken = import.meta.env.VITE_MAPBOX as string;
       const startingLat = filteredDateIdeas[0].coordinates.latitude;
       const startingLong = filteredDateIdeas[0].coordinates.longitude;
       const endingLat = filteredDateIdeas[1].coordinates.latitude;
       const endingLong = filteredDateIdeas[1].coordinates.longitude;
-      const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/${transportMethod}/${startingLong},${startingLat};${endingLong},${endingLat}?geometries=geojson&access_token=${mapboxToken}`;
 
+      // We need to construct semicolon separated list of latitudes and longitudes
+      // We can use an array of arrays to keep track of each point for use later
+
+      const mapboxMarkerCoords: Array<number[]> = []; // We now have a data structure to store each point, we can pass it to the map array. This will update its state. Map array will render markers based on its state
+      let mapboxPathCoords = '';
+      filteredDateIdeas.forEach((date, i) => {
+        const latitude = date.coordinates.latitude;
+        const longitude = date.coordinates.longitude;
+
+        mapboxMarkerCoords.push([longitude, latitude]);
+        mapboxPathCoords += `${longitude},${latitude}`;
+        if (i + 1 < filteredDateIdeas.length) mapboxPathCoords += ';';
+      });
+
+      const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxPathCoords}?geometries=geojson&access_token=${mapboxToken}`;
       axios
         .get<GeoJsonType>(mapboxEndpoint)
         .then(res => {

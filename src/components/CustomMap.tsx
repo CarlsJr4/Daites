@@ -14,9 +14,6 @@ type CustomMapProps = {
   pathData: MapType;
 };
 
-// To draw a path between 2 points, you will need to make a request to MapBox
-// Start coords, end coords
-// You will get back a location array with a path between the points and some info about how long it takes etc...
 export default function CustomMap({ pathData }: CustomMapProps) {
   const pathDataCustom = {
     type: 'Feature',
