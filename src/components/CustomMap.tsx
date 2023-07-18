@@ -12,29 +12,29 @@ import { Offset } from 'mapbox-gl';
 
 type CustomMapProps = {
   locationData: number[][];
-  pathData: MapType;
+  pathLine: MapType;
 };
 
-export default function CustomMap({ locationData, pathData }: CustomMapProps) {
+export default function CustomMap({ locationData, pathLine }: CustomMapProps) {
   const pathDataCustom = {
     type: 'Feature',
     properties: {},
     geometry: {
       type: 'LineString',
-      coordinates: pathData.pathArray,
+      coordinates: pathLine.pathArray,
     },
   };
 
   return (
     <>
       <Heading>Routing Info:</Heading>
-      {Object.keys(pathData).length > 0 ? (
+      {Object.keys(pathLine).length > 0 ? (
         <Box>
           <Text>
-            Total drive time: {Math.ceil(pathData.duration / 60)} minutes
+            Total drive time: {Math.ceil(pathLine.duration / 60)} minutes
           </Text>
           <Text>
-            Total distance: {Math.ceil(pathData.distance * 0.00062137)} mi.
+            Total distance: {Math.ceil(pathLine.distance * 0.00062137)} mi.
           </Text>
         </Box>
       ) : (

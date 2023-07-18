@@ -15,15 +15,17 @@ import MapType from './types/mapType';
 function App() {
   const [zip, setZip] = useState('');
   const [zipError, setZipError] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+
   const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
-  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([
-    [0, 0],
-  ]); // Array that holds lat and long for each point of interest
-  const [pathData, setPathData] = useState<MapType>({} as MapType);
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
   );
-  const [isLoading, setLoading] = useState(false);
+
+  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([
+    [0, 0],
+  ]);
+  const [pathLine, setPathLine] = useState<MapType>({} as MapType);
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
@@ -47,7 +49,7 @@ function App() {
         .get<GeoJsonType>(mapboxEndpoint)
         .then(res => {
           const data = res.data.routes[0];
-          setPathData({
+          setPathLine({
             pathArray: data.geometry.coordinates,
             duration: data.duration,
             distance: data.distance,
@@ -116,7 +118,7 @@ function App() {
         </BaseContainer>
       )}
       <BaseContainer>
-        <CustomMap pathData={pathData} locationData={locationCoords} />
+        <CustomMap pathLine={pathLine} locationData={locationCoords} />
       </BaseContainer>
     </>
   );
