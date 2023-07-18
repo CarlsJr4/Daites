@@ -8,6 +8,10 @@ type LocationInfoType = {
   url: string;
   is_closed: boolean;
   image_url: string;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
 };
 
 export default LocationInfoType;
