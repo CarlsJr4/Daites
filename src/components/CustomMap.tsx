@@ -4,13 +4,14 @@ import Map, {
   Layer,
   Source,
   Popup,
+  MapRef,
 } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import MapType from '../types/mapType';
 import { Offset } from 'mapbox-gl';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import GeoJsonType from '../types/geoJsonType';
 import LocationInfoType from '../types/locationType';
 
@@ -25,6 +26,8 @@ export default function CustomMap({
     latitude: 33.812511,
     zoom: 10,
   });
+
+  const mapRef = useRef<MapRef>(null);
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
@@ -41,10 +44,12 @@ export default function CustomMap({
         if (i + 1 < locations.length) mapboxLinePathData += ';';
       });
 
-      setViewState({
-        longitude: locations[0].coordinates.longitude,
-        latitude: locations[0].coordinates.latitude,
-        zoom: 10,
+      mapRef.current?.flyTo({
+        center: [
+          locations[0].coordinates.longitude,
+          locations[0].coordinates.latitude,
+        ],
+        duration: 2000,
       });
 
       const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxLinePathData}?geometries=geojson&access_token=${mapboxToken}`;
@@ -89,6 +94,7 @@ export default function CustomMap({
 
       <Map
         reuseMaps
+        ref={mapRef}
         onMove={e => setViewState(e.viewState)}
         mapboxAccessToken={import.meta.env.VITE_MAPBOX as string}
         initialViewState={{
@@ -98,8 +104,6 @@ export default function CustomMap({
         }}
         longitude={viewState.longitude}
         latitude={viewState.latitude}
-        // longitude={markerCoords[0][0]} // [0][0] is the longitude of the first location
-        // latitude={markerCoords[0][1]} // [0][1] is the latitude of the first location
         style={{ width: 600, height: 400 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >
