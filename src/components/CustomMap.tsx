@@ -19,7 +19,9 @@ export default function CustomMap({
 }: {
   locations: LocationInfoType[];
 }) {
-  const [markerCoords, setMarkerCoords] = useState<Array<number[]>>([[0, 0]]);
+  const [markerCoords, setMarkerCoords] = useState<Array<number[]>>([
+    [-117.918976, 33.812511],
+  ]);
   const [pathLine, setPathLine] = useState<MapType>({} as MapType);
 
   const pathDataCustom = {
@@ -83,8 +85,8 @@ export default function CustomMap({
         reuseMaps
         mapboxAccessToken={import.meta.env.VITE_MAPBOX as string}
         initialViewState={{
-          longitude: 0,
-          latitude: 0,
+          longitude: -117.918976,
+          latitude: 33.812511,
           zoom: 10,
         }}
         longitude={markerCoords[0][0]} // [0][0] is the longitude of the first location
