@@ -6,16 +6,16 @@ import Map, {
   Popup,
 } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import MapType from '../types/mapType';
 import { Offset } from 'mapbox-gl';
 
 type CustomMapProps = {
-  pathData: MapType;
   locationData: number[][];
+  pathData: MapType;
 };
 
-export default function CustomMap({ pathData, locationData }: CustomMapProps) {
+export default function CustomMap({ locationData, pathData }: CustomMapProps) {
   const pathDataCustom = {
     type: 'Feature',
     properties: {},
@@ -28,18 +28,29 @@ export default function CustomMap({ pathData, locationData }: CustomMapProps) {
   return (
     <>
       <Heading>Routing Info:</Heading>
-      <Text>Total drive time: {Math.ceil(pathData.duration / 60)} minutes</Text>
-      <Text>
-        Total distance: {Math.ceil(pathData.distance * 0.00062137)} mi.
-      </Text>
+      {Object.keys(pathData).length > 0 ? (
+        <Box>
+          <Text>
+            Total drive time: {Math.ceil(pathData.duration / 60)} minutes
+          </Text>
+          <Text>
+            Total distance: {Math.ceil(pathData.distance * 0.00062137)} mi.
+          </Text>
+        </Box>
+      ) : (
+        ''
+      )}
+
       <Map
         reuseMaps
         mapboxAccessToken={import.meta.env.VITE_MAPBOX as string}
         initialViewState={{
-          longitude: pathData.startingLong,
-          latitude: pathData.startingLat,
+          longitude: 0,
+          latitude: 0,
           zoom: 10,
         }}
+        longitude={locationData[0][0]} // [0][0] is the longitude of the first location
+        latitude={locationData[0][1]} // [0][1] is the latitude of the first location
         style={{ width: 600, height: 400 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >

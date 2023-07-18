@@ -3,7 +3,6 @@ import { Heading, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import LocationInfoType from './types/locationType';
-import MapType from './types/mapType';
 import GeoJsonType from './types/geoJsonType';
 import BaseContainer from './components/BaseContainer';
 import ZipForm from './components/ZipForm';
@@ -11,53 +10,32 @@ import Reccomendations from './components/Reccomendations';
 import pickRandomArrayItems from './helpers/pickRandomArrayItems';
 import CustomMap from './components/CustomMap';
 import './main.css';
+import MapType from './types/mapType';
 
 function App() {
   const [zip, setZip] = useState('');
   const [zipError, setZipError] = useState(false);
   const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
-  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([]); // Array that holds lat and long for each point of interest
+  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([
+    [0, 0],
+  ]); // Array that holds lat and long for each point of interest
+  const [pathData, setPathData] = useState<MapType>({} as MapType);
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
   );
   const [isLoading, setLoading] = useState(false);
-  const [pathData, setPathData] = useState<MapType>({
-    startingLat: 32.6339705386318,
-    startingLong: -116.950957546514,
-    endingLat: 32.654486,
-    endingLong: -116.978975,
-    pathArray: [
-      [-84.512007, 39.103933],
-      [-84.511692, 39.102682],
-      [-84.511987, 39.102638],
-    ],
-    duration: 3000,
-    distance: 3000,
-  });
 
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
-    // How can we make this code more reusable?
-    // How can we reduce the number of type files? Do we even need the mapType type?
-
     if (filteredDateIdeas.length > 0) {
       const mapboxToken = import.meta.env.VITE_MAPBOX as string;
-      // How can we get rid of these? We need a more reliable way to grab first and last coords from the list
-      const startingLat = filteredDateIdeas[0].coordinates.latitude;
-      const startingLong = filteredDateIdeas[0].coordinates.longitude;
-      const endingLat = filteredDateIdeas[1].coordinates.latitude;
-      const endingLong = filteredDateIdeas[1].coordinates.longitude;
-
-      // We need to construct semicolon separated list of latitudes and longitudes
-      // We can use an array of arrays to keep track of each point for use later
-
-      const mapboxLocationCoords: Array<number[]> = []; // We now have a data structure to store each point, we can pass it to the map array. This will update its state. Map array will render Locations based on its state
+      const mapboxLocationCoords: Array<number[]> = [];
       let mapboxPathCoords = '';
       filteredDateIdeas.forEach((date, i) => {
         const latitude = date.coordinates.latitude;
         const longitude = date.coordinates.longitude;
 
-        mapboxLocationCoords.push([longitude, latitude]); // Each mapboxMarkerCoords array item represents 1 location (latitude and longitude) - Use this to render the points
+        mapboxLocationCoords.push([longitude, latitude]);
         mapboxPathCoords += `${longitude},${latitude}`;
         if (i + 1 < filteredDateIdeas.length) mapboxPathCoords += ';';
       });
@@ -70,10 +48,6 @@ function App() {
         .then(res => {
           const data = res.data.routes[0];
           setPathData({
-            startingLat,
-            startingLong,
-            endingLat,
-            endingLong,
             pathArray: data.geometry.coordinates,
             duration: data.duration,
             distance: data.distance,
