@@ -10,6 +10,7 @@ import {
   Box,
   HStack,
   SkeletonCircle,
+  VStack,
 } from '@chakra-ui/react';
 import LocationInfoType, { BusinessType } from '../types/locationType';
 
@@ -26,7 +27,7 @@ export default function DateCard({
         <Stack divider={<StackDivider />} spacing="4">
           <HStack spacing="20px">
             <Image
-              borderRadius="full"
+              borderRadius="md"
               boxSize="150px"
               objectFit="cover"
               src={item.image_url}
@@ -34,12 +35,14 @@ export default function DateCard({
             />
             <Heading size="md">
               {index + 1}. {item.name}{' '}
-              <Box>
-                <Badge colorScheme="green">Sightseeing</Badge>
-              </Box>
+              <VStack align="baseline" mt={5} gap={3}>
+                {item.categories.map(category => (
+                  <Badge colorScheme="green">{category.title}</Badge>
+                ))}
+              </VStack>
             </Heading>
           </HStack>
-          <Text>Take a stroll around {item.name}.</Text>
+          {/* <Text>Take a stroll around {item.name}.</Text> */}
           <Heading size="xs" textTransform="uppercase">
             Extra Info
           </Heading>
