@@ -12,9 +12,10 @@ import { Offset } from 'mapbox-gl';
 
 type CustomMapProps = {
   pathData: MapType;
+  locationData: number[][];
 };
 
-export default function CustomMap({ pathData }: CustomMapProps) {
+export default function CustomMap({ pathData, locationData }: CustomMapProps) {
   const pathDataCustom = {
     type: 'Feature',
     properties: {},
@@ -58,38 +59,28 @@ export default function CustomMap({ pathData }: CustomMapProps) {
             }}
           />
         </Source>
-        <Popup
-          className="customPopup"
-          longitude={pathData.endingLong}
-          latitude={pathData.endingLat}
-          anchor="left"
-          offset={[15, -35] as Offset}
-          closeButton={false}
-          closeOnClick={false}
-        >
-          Location 2
-        </Popup>
-        <Popup
-          className="customPopup"
-          longitude={pathData.startingLong}
-          latitude={pathData.startingLat}
-          anchor="left"
-          offset={[15, -35] as Offset}
-          closeButton={false}
-          closeOnClick={false}
-        >
-          Location 1
-        </Popup>
-        <Marker
-          longitude={pathData.startingLong}
-          latitude={pathData.startingLat}
-          anchor="bottom"
-        />
-        <Marker
-          longitude={pathData.endingLong}
-          latitude={pathData.endingLat}
-          anchor="bottom"
-        />
+        {locationData.map(location => {
+          return (
+            <>
+              <Popup
+                className="customPopup"
+                longitude={location[0]}
+                latitude={location[1]}
+                anchor="left"
+                offset={[15, -35] as Offset}
+                closeButton={false}
+                closeOnClick={false}
+              >
+                PLACEHOLDER
+              </Popup>
+              <Marker
+                longitude={location[0]}
+                latitude={location[1]}
+                anchor="bottom"
+              />
+            </>
+          );
+        })}
       </Map>
     </>
   );

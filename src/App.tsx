@@ -16,6 +16,7 @@ function App() {
   const [zip, setZip] = useState('');
   const [zipError, setZipError] = useState(false);
   const [dateIdeas, setDateIdeas] = useState([] as LocationInfoType[]);
+  const [locationCoords, setLocationCoords] = useState<Array<number[]>>([]); // Array that holds lat and long for each point of interest
   const [filteredDateIdeas, setFilteredDateIdeas] = useState(
     [] as LocationInfoType[]
   );
@@ -41,6 +42,7 @@ function App() {
 
     if (filteredDateIdeas.length > 0) {
       const mapboxToken = import.meta.env.VITE_MAPBOX as string;
+      // How can we get rid of these? We need a more reliable way to grab first and last coords from the list
       const startingLat = filteredDateIdeas[0].coordinates.latitude;
       const startingLong = filteredDateIdeas[0].coordinates.longitude;
       const endingLat = filteredDateIdeas[1].coordinates.latitude;
@@ -49,16 +51,18 @@ function App() {
       // We need to construct semicolon separated list of latitudes and longitudes
       // We can use an array of arrays to keep track of each point for use later
 
-      const mapboxMarkerCoords: Array<number[]> = []; // We now have a data structure to store each point, we can pass it to the map array. This will update its state. Map array will render markers based on its state
+      const mapboxLocationCoords: Array<number[]> = []; // We now have a data structure to store each point, we can pass it to the map array. This will update its state. Map array will render Locations based on its state
       let mapboxPathCoords = '';
       filteredDateIdeas.forEach((date, i) => {
         const latitude = date.coordinates.latitude;
         const longitude = date.coordinates.longitude;
 
-        mapboxMarkerCoords.push([longitude, latitude]);
+        mapboxLocationCoords.push([longitude, latitude]); // Each mapboxMarkerCoords array item represents 1 location (latitude and longitude) - Use this to render the points
         mapboxPathCoords += `${longitude},${latitude}`;
         if (i + 1 < filteredDateIdeas.length) mapboxPathCoords += ';';
       });
+
+      setLocationCoords(mapboxLocationCoords);
 
       const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxPathCoords}?geometries=geojson&access_token=${mapboxToken}`;
       axios
@@ -138,7 +142,7 @@ function App() {
         </BaseContainer>
       )}
       <BaseContainer>
-        <CustomMap pathData={pathData} />
+        <CustomMap pathData={pathData} locationData={locationCoords} />
       </BaseContainer>
     </>
   );
