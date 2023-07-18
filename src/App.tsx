@@ -30,27 +30,41 @@ function App() {
     }
     setLoading(true);
 
-    axios
-      .get<LocationInfoType>(
-        `https://outing-planner-api.onrender.com/recommendations/${zip}`
-      )
-      .then(res => {
-        setDateIdeas(res.data.businesses);
-        // res.data comes in this form:
-        // {
-        // 	businesses: array with location type shape,
-        // 	region: {...}
-        // 	total: ...
-        // }
-        setFilteredDateIdeas(
-          pickRandomArrayItems<BusinessType>(res.data.businesses, 3)
-        );
-      })
-      .catch(err => console.log(err))
-      .finally(() => {
-        setLoading(false);
-        setZip('');
-      });
+    const storedZip = JSON.parse(
+      localStorage.getItem('cachedZip') as string
+    ) as string | null;
+
+    // Cache Yelp data with local storage to prevent excessive API call use and improve load times.
+    if (!storedZip || zip !== storedZip) {
+      axios
+        .get<LocationInfoType>(
+          `https://outing-planner-api.onrender.com/recommendations/${zip}`
+        )
+        .then(res => {
+          setDateIdeas(res.data.businesses);
+          localStorage.setItem(
+            'cachedRecommendations',
+            JSON.stringify(res.data.businesses)
+          );
+          localStorage.setItem('cachedZip', JSON.stringify(zip));
+          setFilteredDateIdeas(
+            pickRandomArrayItems<BusinessType>(res.data.businesses, 3)
+          );
+        })
+        .catch(err => console.log(err))
+        .finally(() => {
+          setLoading(false);
+          setZip('');
+        });
+    } else {
+      const cachedRecommendations = JSON.parse(
+        localStorage.getItem('cachedRecommendations') as string
+      ) as BusinessType[];
+      setFilteredDateIdeas(
+        pickRandomArrayItems<BusinessType>(cachedRecommendations, 3)
+      );
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
