@@ -4,7 +4,8 @@ function pickRandomArrayItems<T>(
   numberOfItemsReturned: number
 ): T[] {
   const allDates = [...originalArray];
-  const shuffledDates = allDates.sort((a, b) => 0.5 - Math.random());
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const shuffledDates = allDates.sort((_a, _b) => 0.5 - Math.random());
 
   return shuffledDates.slice(0, numberOfItemsReturned);
 }
