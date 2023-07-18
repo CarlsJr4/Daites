@@ -34,7 +34,7 @@ function App() {
       .then(res => {
         setDateIdeas(res.data);
         setFilteredDateIdeas(
-          pickRandomArrayItems<LocationInfoType>(res.data, 2)
+          pickRandomArrayItems<LocationInfoType>(res.data, 3)
         );
       })
       .catch(err => console.log(err))
