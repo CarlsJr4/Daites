@@ -32,7 +32,6 @@ export default function CustomMap({
   // We can only run the mapbox API once we get the coordinates of the Yelp data. So we use an effect hook.
   useEffect(() => {
     if (locations.length > 0) {
-      const mapboxToken = import.meta.env.VITE_MAPBOX as string;
       const mapboxMarkerCoords: Array<number[]> = [];
       let mapboxLinePathData = '';
       locations.forEach((date, i) => {
@@ -52,7 +51,7 @@ export default function CustomMap({
         duration: 2000,
       });
 
-      const mapboxEndpoint = `https://api.mapbox.com/directions/v5/mapbox/driving/${mapboxLinePathData}?geometries=geojson&access_token=${mapboxToken}`;
+      const mapboxEndpoint = `https://outing-planner-api.onrender.com/coordinates/${mapboxLinePathData}`;
       axios
         .get<GeoJsonType>(mapboxEndpoint)
         .then(res => {
