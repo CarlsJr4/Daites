@@ -95,7 +95,7 @@ export default function CustomMap({
         reuseMaps
         ref={mapRef}
         onMove={e => setViewState(e.viewState)}
-        mapboxAccessToken={import.meta.env.VITE_MAPBOX as string}
+        mapboxAccessToken="pk.eyJ1IjoiY2FybHNqMyIsImEiOiJjbGs2NzZjcjQxNGEzM2Ztcm14b3VncG82In0.nwGJ5nwSrsWqwjm7IsGawA"
         initialViewState={{
           longitude: -117.918976,
           latitude: 33.812511,
