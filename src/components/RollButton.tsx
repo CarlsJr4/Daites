@@ -18,7 +18,7 @@ export default function RollButton({
     <Button
       onClick={() =>
         setFilteredDateIdeas(
-          pickRandomArrayItems<LocationInfoType>(dateIdeas, 2)
+          pickRandomArrayItems<LocationInfoType>(dateIdeas, 3)
         )
       }
       alignSelf="baseline"
