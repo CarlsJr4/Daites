@@ -126,7 +126,7 @@ export default function CustomMap({
         {locations.map((location, i) => {
           const { longitude, latitude } = location.coordinates;
           return (
-            <>
+            <Box key={location.id}>
               <Popup
                 className="customPopup"
                 longitude={longitude}
@@ -143,7 +143,7 @@ export default function CustomMap({
                 latitude={latitude}
                 anchor="bottom"
               />
-            </>
+            </Box>
           );
         })}
       </Map>
