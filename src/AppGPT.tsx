@@ -32,6 +32,7 @@ function App() {
   // Solve the conflicts another day
   // Focus on MVP right now: Input preferences -> chatGPT returns stuff -> user inputs more stuff -> into Yelp API -> output to app
   // Just have all the form stuff be on one single page
+  // Test
 
   return (
     <>
