@@ -2,9 +2,9 @@
 
 ## Project: [Outing Planner]([https://carlsjr4.github.io/ridesaver/](https://outing-planner.vercel.app/))
 
-See [**custom React hooks**](https://github.com/CarlsJr4/carpool-manager/tree/master/src/custom_hooks) \
-See [**reducer logic for the React Context API**](https://github.com/CarlsJr4/carpool-manager/tree/master/src/context/reducers) \
-See [**main React components**](https://github.com/CarlsJr4/carpool-manager/tree/master/src/routes/planner) 
+See [**Mapbox Integration**]([https://github.com/CarlsJr4/carpool-manager/tree/master/src/custom_hooks](https://github.com/CarlsJr4/Outing-Planner/blob/main/src/components/CustomMap.tsx)) \
+See [**Caching Yelp API data to prevent excess API calls**]([https://github.com/CarlsJr4/carpool-manager/tree/master/src/context/reducers](https://github.com/CarlsJr4/Outing-Planner/blob/main/src/App.tsx)) \
+See [**Custom types**]([https://github.com/CarlsJr4/carpool-manager/tree/master/src/routes/planner](https://github.com/CarlsJr4/Outing-Planner/tree/main/src/types)) 
 
 This app was designed for college students who run on-campus organizations and host social events. To simplify the hassle of micromanaging drivers and passengers, I developed a drag-and-drop interface with CRUD functionalities. This repository holds all the front-end logic. This app is a large project, and many more features are planned or in-progress.   
 
