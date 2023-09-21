@@ -8,7 +8,6 @@ import {
   Heading,
   Badge,
   Box,
-  HStack,
   SkeletonCircle,
   VStack,
 } from '@chakra-ui/react';
