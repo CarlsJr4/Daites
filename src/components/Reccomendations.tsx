@@ -32,7 +32,7 @@ export default function Reccomendations({
       ) : (
         ''
       )}
-      <SimpleGrid columns={3} spacing={5}>
+      <SimpleGrid columns={[1, 1, 3]} spacing={5}>
         {recommendations.map((item, i) => (
           <DateCard key={item.id} index={i} item={item} />
         ))}

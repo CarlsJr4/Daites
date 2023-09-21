@@ -25,7 +25,7 @@ export default function DateCard({
     <Card h="100%" key={item.id}>
       <CardBody>
         <Stack divider={<StackDivider />} spacing="4">
-          <HStack spacing="20px">
+          <Stack direction="column" spacing="20px">
             <Image
               borderRadius="md"
               boxSize="150px"
@@ -41,7 +41,7 @@ export default function DateCard({
                 ))}
               </VStack>
             </Heading>
-          </HStack>
+          </Stack>
           {/* <Text>Take a stroll around {item.name}.</Text> */}
           <Heading size="xs" textTransform="uppercase">
             Extra Info

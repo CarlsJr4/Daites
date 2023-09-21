@@ -103,7 +103,7 @@ export default function CustomMap({
         }}
         longitude={viewState.longitude}
         latitude={viewState.latitude}
-        style={{ width: 600, height: 400 }}
+        style={{ width: 'inherit', height: 600 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >
         <NavigationControl />
