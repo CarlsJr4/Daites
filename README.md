@@ -1,4 +1,4 @@
-![Outing Planner Preview](https://cdn.sanity.io/images/nof1t6y8/projects/cb55df0c2f08c96e1bbe9e94eb2d1d5de37d20bc-1914x630.jpg)
+![Outing Planner Preview](https://cdn.sanity.io/images/nocf1t6y8/projects/8e2b55329f3a9b826db22abb1a02ec2e61cab073-2529x1240.png?w=1000&h=1000&fit=max)
 
 ## Live Project: [Outing Planner](https://outing-planner.vercel.app/)
 
